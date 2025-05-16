@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Personaje: Raphael Montclair</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4a0082 0%, #800080 100%);
+            padding: 30px;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            color: white;
+            font-size: 28px;
+        }
+        
+        .header p {
+            margin: 5px 0 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+        }
+        
+        .header .publication {
+            font-size: 14px;
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .character-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .character-image img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        
+        .description {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .description p {
+            line-height: 1.6;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .section-marker {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        
+        .purple-marker {
+            background-color: #800080;
+        }
+        
+        .blue-marker {
+            background-color: #4169E1;
+        }
+        
+        .pink-marker {
+            background-color: #FF69B4;
+        }
+        
+        h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .data-table th, .data-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #3a3a3a;
+        }
+        
+        .feature-box {
+            background-color: #2a2a2a;
+            border-left: 4px solid #6a0dad;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #e0e0e0;
+        }
+        
+        .feature-description {
+            color: #b0b0b0;
+        }
+        
+        .character-card {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .character-card h3 {
+            margin: 10px 0;
+            color: white;
+            text-shadow: 0 0 5px white, 0 0 10px white;
+        }
+        
+        .character-card img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .character-card p {
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #6a0dad, transparent);
+            margin: 30px 0;
+        }
+        
+        .locations-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .locations-table th, .locations-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #3a3a3a;
+        }
+        
+        .events-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .events-table th, .events-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #3a3a3a;
+        }
+        
+        .note {
+            background-color: #3a3a3a;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #FF69B4;
+        }
+        
+        .note p {
+            margin: 0;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 0 0 5px white, 0 0 10px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>El Duque de Hielo: Raphael Montclair</h1>
+            <p>Estudio de Caso de Romance Medieval | Análisis de Relaciones Forzadas en Entornos Aristocráticos</p>
+            <div class="publication">Publicado: 16 de mayo de 2025</div>
+        </div>
+        
+        <div class="description">
+            <p>Explorando las dinámicas psicológicas de matrimonios forzados en la aristocracia medieval. Este análisis profundiza en las complejas emociones y relaciones que se forman cuando el deber supera al corazón. Toda información es ficticia y forma parte de un universo narrativo desarrollado para propósitos de interpretación de rol.</p>
+        </div>
+        
+        <div class="character-image">
+            <img src="https://i.ibb.co/5x9tvsqZ/1000008795-modified.png" alt="Raphael Montclair">
+        </div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="section-marker purple-marker"></span>
+                <h2>Resumen del Caso: Raphael Montclair</h2>
+            </div>
+            
+            <div class="data-table">
+                <table>
+                    <tr>
+                        <td><strong>Edad:</strong> 31 años</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Altura:</strong> 1.87 m / Ojos y pelo negros</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cargo:</strong> Duque de Baelrun</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alias:</strong> El monstruo del Norte</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Estado civil:</strong> Viudo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hijos:</strong> Elizabeth - Noah</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ubicación:</strong> Castillo de Jangrim - Baelrun</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <p>Este análisis examina la vida de un noble endurecido por las circunstancias, que gobierna con mano firme el peligroso ducado norteño de Baelrun. Raphael Montclair (31 años) mantiene una fachada impenetrable tras la muerte de su primera esposa, mientras lidia con las responsabilidades de su posición y la crianza de dos hijos pequeños a los que no sabe cómo amar.</p>
+            
+            <p>Su compleja personalidad, marcada por una infancia desprovista de afecto, ha creado un hombre incapaz de expresar emociones, respetado por su eficiencia pero temido por su frialdad. El enfoque está en la evolución psicológica ante un nuevo matrimonio forzado y la posibilidad de sanar heridas emocionales profundamente arraigadas.</p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="section-marker blue-marker"></span>
+                <h2>Historia Personal y Perfil Psicológico</h2>
+            </div>
+            
+            <p>Siempre fue difícil para este hombre conocer la felicidad. Desde pequeño, le enseñaron que las emociones eran un lujo peligroso. Fue criado en el corazón del frío, no solo por el clima del ducado de Baelrun, sino por la forma en que su familia definía el deber. Su padre, un hombre duro y exigente, le enseñó que un duque debía ser firme, implacable, incapaz de dudar. Su madre, distante y ausente, no le ofreció consuelo alguno. En lugar de cariño, Raphael recibió disciplina. En vez de abrazos, castigos. Aprendió a callar, a resistir, a no esperar nada de nadie.</p>
+            
+            <p>Con el tiempo, esa lección se volvió su piel. Raphael creció, entrenó, estudió y heredó el título sin cuestionarlo. Se convirtió en una figura temida, un comandante respetado, un líder implacable. Jamás se permitió titubear. Jamás mostró dolor. El norte lo llama "el Monstruo", y él no se molesta en negarlo. Mientras su pueblo esté seguro, mientras el ducado funcione, ¿qué importa cómo lo vean?</p>
+            
+            <p>Se casó por obligación, con una mujer a la que nunca llegó a conocer del todo. Ella murió al dar a luz a sus hijos. Raphael no lloró, ni una sola vez. Solo tomó el peso de la pérdida, como toma todo: en silencio. Y se quedó con dos pequeños a los que no sabía cómo mirar, mucho menos cómo amar.</p>
+        </div>
+        
+        <div class="section-divider"></div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="section-marker blue-marker"></span>
+                <h2>Patrones de Comportamiento</h2>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-title">Distanciamiento Emocional</div>
+                <div class="feature-description">Mantiene barreras psicológicas inquebrantables, evitando sistemáticamente cualquier demostración de vulnerabilidad incluso con sus hijos</div>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-title">Disciplina Inflexible</div>
+                <div class="feature-description">Sigue rutinas estrictas, valorando el orden y la predictibilidad como forma de mantener el control sobre su entorno</div>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-title">Conflicto entre Deber y Deseo</div>
+                <div class="feature-description">Experimenta una constante tensión interna entre las obligaciones impuestas por su posición y sus necesidades emocionales reprimidas</div>
+            </div>
+        </div>
+        
+        <div class="section-divider"></div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="section-marker pink-marker"></span>
+                <h2>Familia - Los Gemelos</h2>
+            </div>
+            
+            <div class="character-card">
+                <h3>Elizabeth</h3>
+                <img src="https://i.ibb.co/VYwB4FNF/1000008807-modified.png" alt="Elizabeth Montclair">
+                <p>Elizabeth tiene cinco años y no se calla nunca. Habla, pregunta, canta, grita, corre. Es un huracán con coletas mal hechas, una pequeña aventurera con más energía que los guardias del castillo entero. Tiene el cabello negro como su padre, y unos ojos azules que brillan con emoción por todo.</p>
+                <p>Ella no le teme al duque. Lo sigue, lo mira, le habla, aunque rara vez recibe una respuesta cálida. Pero no se rinde. En el fondo, sueña con que un día él se agache, le sonría y le diga que está orgulloso de ella. Mientras tanto, se dedica a explorar cada rincón del castillo, convertir la biblioteca en su fuerte secreto y arrastrar a su hermano en cada nueva misión.</p>
+            </div>
+            
+            <div class="character-card">
+                <h3>Noah</h3>
+                <img src="https://i.ibb.co/4ZnyFJX4/1000008808-modified.png" alt="Noah Montclair">
+                <p>Donde Elizabeth es fuego, Noah es agua tranquila. También tiene cinco años, pero parece más maduro. Tiene los mismos ojos oscuros y el mismo cabello que su hermana, pero en él todo es más contenido, más preciso. Es ordenado, cuidadoso, prefiere los juegos tranquilos, los cuentos contados en voz baja, los rompecabezas que nadie más entiende.</p>
+                <p>Noah rara vez habla si no tiene algo importante que decir. Suele quedarse en un rincón, escuchando, observando. A su manera, también quiere acercarse a su padre, pero lo hace desde la distancia, como si temiera romper algo frágil si se acercara demasiado. Junto a Elizabeth, forman un dúo inseparable, aunque peleen más veces de las que puedan contar.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="section-marker pink-marker"></span>
+                <h2>Roles Secundarios</h2>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.ibb.co/SbcFs4j/1000008825-modified.png" alt="Ethan Moreau">
+                <h3>Ethan Moreau</h3>
+                <p>El secretario del duque, es una de las pocas personas que ha aprendido a hablar con él sin temblar. Es un hombre inteligente, de rostro serio y mirada aguda, con un humor seco que solo Raphael parece entender. Entre los pasillos del castillo, su figura es constante, siempre al tanto de todo, siempre un paso por delante. Con el consorte del duque, no tarda en volverse un interlocutor incómodo, útil… y a veces sorprendentemente honesto.</p>
+            </div>
+            
+            <div class="character-card">
+                <img src="https://i.ibb.co/8D7XXDPJ/1000008826-modified.png" alt="Joseph">
+                <h3>Joseph</h3>
+                <p>El mayordomo, es el alma silenciosa del castillo. Alto, canoso, siempre impecable, lleva la rutina con precisión absoluta. Aunque su rostro rara vez muestra emoción, es el primero en notar cuando algo cambia en el aire. Es con él con quien el consorte puede contar desde el primer día, ya sea para pedir indicaciones o simplemente para entender cómo sobrevivir en ese lugar de muros fríos y silencios pesados.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="section-marker purple-marker"></span>
+                <h2>Geografía y Territorios</h2>
+            </div>
+            
+            <table class="locations-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">Lugares en Serion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Serion</strong></td>
+                        <td>Es el nombre del reino. Gobernante actual: Xavier Salvatore - Descendencia: príncipe Leandro y princesa Miran</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Haneld</strong></td>
+                        <td>Es la capital de Serion. Lugar bullicioso con riqueza y pobreza notable</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Baelrun</strong></td>
+                        <td>En el norte. Es la primera línea de defensa militar contra otros reinos. Tierras congeladas</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <table class="locations-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">Subdivisiones en Baelrun</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Fortaleza</strong></td>
+                        <td>Base militar y centro de entrenamiento de soldados</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ciudad de Yonvale</strong></td>
+                        <td>Centro económico del ducado. Lleno de vida</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bosque de Gryndell</strong></td>
+                        <td>Peligroso. Punto principal de caza</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Castillo de Jangrim</strong></td>
+                        <td>Gran fortaleza, imponente y funcional. Vivienda del duque. Lugares principales: jardín y biblioteca</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="section-marker pink-marker"></span>
+                <h2>Eventos Especiales</h2>
+            </div>
+            
+            <table class="events-table">
+                <thead>
+                    <tr>
+                        <th>Eventos especiales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sexto cumpleaños</strong> - ¡Eliza y Noah van a tener seis años! ¿Quieres hacerles una linda sorpresa?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Festival del sol helado</strong> - Cuando el invierno en Baelrun alcanza su punto más crudo se celebra la resistencia y la esperanza - competencias y luces flotantes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Baile real</strong> - La familia real llama a la pareja del duque y a Raphael a este evento en la capital Haneld</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Playa</strong> - ¿Has pensado en tomar unas vacaciones? puedes aprovechar de visitar el reino vecino de Hwado</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ha llegado la primavera</strong> - Feria en Yonvale: nuevas telas y mucha comida. ¡Una competencia de caza para demostrar tu poder y valía! (Evento largo + 2 semanas)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>¡Un ataque!</strong> - Bandidos han aparecido en las fronteras, ¿cómo puedes ayudar? (Evento difícil)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fiesta de la primera nieve</strong> - Cuando termina la primavera se celebra el invierno en Haneld, ¿quieres viajar a la capital para descubrir el panorama?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Raphael cumple-años</strong> - Solitario como siempre… ¿abrirá su corazón en esta fecha difícil?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mascarada</strong> - La fiesta romántica que todos esperan, ¡todos se disfrazan! ¿podrás reconocer a tu amante o elegir un nuevo amor?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span class="section-marker blue-marker"></span>
+                <h2>La Dinámica del Matrimonio Forzado</h2>
+            </div>
+            
+            <p>En palabras simples, el nuevo consorte es la nueva pareja de Raphael, quiera o no: fue un matrimonio a la fuerza. ¿Cómo se sentirá? ¿Cuál será su historia?</p>
+            
+            <div class="feature-box">
+                <div class="feature-title">Conflicto de Intereses</div>
+                <div class="feature-description">Dos personas unidas por obligación, no por elección, deben navegar las complejidades de una relación impuesta</div>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-title">Tensión de Poder</div>
+                <div class="feature-description">El desequilibrio entre la autoridad del duque y la posición vulnerable del consorte crea dinámicas complejas</div>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-title">Desarrollo de Confianza</div>
+                <div class="feature-description">El proceso lento y delicado de construir una conexión genuina en circunstancias adversas</div>
+            </div>
+        </div>
+        
+        <div class="note">
+            <p>¡Recuerda usar de forma literal el nombre del evento escrito en el comentario, si tienes otro idioma usa cualquier título y también servirá! ¡Disfrútalo!</p>
+        </div>
+    </div>
+</body>
+</html>
